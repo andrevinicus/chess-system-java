@@ -4,11 +4,14 @@
  */
 package chess;
 
+
+import boardgame.BoardExecption;
+
 /**
  *
  * @author GCM_02
  */
-public class ChessExeption extends RuntimeException{
+public class ChessExeption extends BoardExecption{
     private static final long serialVersionUID = 1L;
     
     public ChessExeption(String msg){
