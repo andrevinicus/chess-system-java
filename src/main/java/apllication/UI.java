@@ -58,18 +58,26 @@ public class UI {
 
     }
 
-    public static void printMatch(ChessMatch chessMatch,List<ChessPiece> captured){
+    public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured) {
         printBoard(chessMatch.getPieces());
         System.out.println();
         printCapturedPieces(captured);
         System.out.println();
         System.out.println("Turn : " + chessMatch.getTurn());
-        System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
-        if(chessMatch.getCheck()){
-            System.out.println("CHECK");
+        if (!chessMatch.getCheckMate()) {
+
+            System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());
+            if (chessMatch.getCheck()) {
+                System.out.println("CHECK");
+            }
+
         }
-        
-    }
+        else{
+            System.out.println("CHECKMATCH");
+            System.out.println("Winner: " + chessMatch.getCurrentPlayer());
+        }
+
+    
 
     public static void printBoard(ChessPiece[][] pieces) {
         for (int i = 0; i < pieces.length; i++) {
@@ -123,6 +131,6 @@ public class UI {
         System.out.print(ANSI_YELLOW);
         System.out.println(Arrays.toString(black.toArray()));
         System.out.println(ANSI_RESET);
-        
+
     }
 }
