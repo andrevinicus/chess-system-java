@@ -6,6 +6,7 @@ package chess.pieces;
 
 import boardgame.Board;
 import boardgame.Position;
+import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.Color;
 
@@ -15,7 +16,7 @@ import chess.Color;
  */
 public class King extends ChessPiece {
 
-    public King(Board board, Color color) {
+    public King(Board board, Color color,  ChessMatch aThis) {
         super(board, color);
     }
 

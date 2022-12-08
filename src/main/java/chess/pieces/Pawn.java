@@ -16,13 +16,12 @@ import chess.Color;
  */
 public class Pawn extends ChessPiece {
 
-    public Pawn(Board board, Color color) {
+    public Pawn(Board board, Color color, ChessMatch aThis) {
         super(board, color);
     }
 
-    public Pawn(Board board, Color color, ChessMatch aThis) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+  
+   
 
 
     @Override
